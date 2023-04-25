@@ -1,0 +1,18 @@
+{
+    "name": "carl/algorithms",
+    "autoload": {
+        "psr-4": {
+            "app\\": "src/",
+            "appTest\\": "test/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sorbon",
+            "email": "sorbon@internet.ru"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    }
+}
