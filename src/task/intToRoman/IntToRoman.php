@@ -30,7 +30,6 @@ class IntToRoman implements Task
             }
         }
         return $output;
-
     }
 
     public function decision()
