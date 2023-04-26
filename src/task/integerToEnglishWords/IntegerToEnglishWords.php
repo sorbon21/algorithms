@@ -18,17 +18,15 @@ class IntegerToEnglishWords implements Task
 
     public function numberToWords($num)
     {
-        $values = [4, 3, 2, 1];
-        $words = ["four", "three", "two", "one"];
-        $size = count($values);
+        $values =[1 => 'one', 2 => 'two', 3 => 'three', 4 => 'four', 5 => 'five', 6 => 'six', 7 => 'seven', 8 => 'eight', 9 => 'nine', 10 => 'ten', 11 => 'eleven', 12 => 'twelve', 13 => 'thirteen', 14 => 'fourteen', 15 => 'fifteen', 16 => 'sixteen', 17 => 'seventeen', 18 => 'eighteen', 19 => 'nineteen', 20 => 'twenty', 21 => 'twenty - one', 22 => 'twenty - two', 23 => 'twenty - three', 30 => 'thirty', 40 => 'forty', 50 => 'fifty', 60 => 'sixty', 70 => 'seventy', 80 => 'eighty', 90 => 'ninety', 100 => 'one hundred * ', 101 => 'one hundred and one', 200 => 'two hundred', 300 => 'three hundred', 1000 => 'one thousand', 1000000 => 'one million', 10000000 => 'ten million'];
+        krsort($values,SORT_DESC);
         $output = "";
-        for ($i = 0; $i < $size; $i++) {
-            while ($num >= $values[$i]) {
-                $num -= $values[$i];
-                $output .= $words[$i];
+        foreach ($values as $key => $value) {
+            while ($num >= $key) {
+                $num -= $key;
+                $output .= $value;
             }
         }
-
         return $output;
     }
 
